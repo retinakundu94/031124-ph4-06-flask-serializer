@@ -15,3 +15,6 @@ class Politician():
 
 class Scandal():
     pass
+
+class Involvement():
+    pass
