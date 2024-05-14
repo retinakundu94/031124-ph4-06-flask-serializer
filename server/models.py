@@ -10,11 +10,33 @@ metadata = MetaData(naming_convention={
 
 db = SQLAlchemy(metadata=metadata)
 
+
+# Politician ###########
+# name          string #
+# position      string #
+########################
+
 class Politician():
     pass
 
+
+
+# Scandal ##############
+# headline      string #
+# date          string #
+########################
+# (for the date we could use db.DateTime instead...)
+
 class Scandal():
     pass
+
+
+
+# Involvement ###########
+# politician_id integer #
+# scandal_id    integer #
+# role          string  #
+#########################
 
 class Involvement():
     pass
