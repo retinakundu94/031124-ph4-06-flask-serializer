@@ -11,32 +11,26 @@ metadata = MetaData(naming_convention={
 db = SQLAlchemy(metadata=metadata)
 
 
-# Politician ###########
-# name          string #
-# position      string #
-########################
+class Doctor(db.Model):
+    
+    __tablename__ = 'doctors_table'
 
-class Politician():
-    pass
-
-
-
-# Scandal ##############
-# headline      string #
-# date          string #
-########################
-# (for the date we could use db.DateTime instead...)
-
-class Scandal():
-    pass
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, nullable=False)
+    specialty = db.Column(db.String)
 
 
+class Patient(db.Model):
+    
+    __tablename__ = 'patients_table'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, nullable=False)
 
-# Involvement ###########
-# politician_id integer #
-# scandal_id    integer #
-# role          string  #
-#########################
 
-class Involvement():
-    pass
+class Appointment(db.Model):
+    
+    __tablename__ = 'appointments_table'
+
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.String)
